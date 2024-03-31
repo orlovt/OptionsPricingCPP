@@ -35,6 +35,21 @@ The executable `price_opt` provides a command-line interface to select and run d
 
 Replace the parameters with your desired values to compute the price of an option using the selected model.
 
+## Performance Comparison and Improvement
+
+
+| Pricing Model  | Initial Time (ms) | Optimized Time (ms) | Improvement |
+|----------------|-------------------|---------------------|-------------|
+| Binomial       | 0.013708          | 0.008734            | ~36.3%      |
+| Black-Scholes  | 0.001708          | 0.000508            | ~70.3%      |
+| Monte Carlo    | 2.72567           | 0.596726            | ~78.1%      |
+
+
+- The **Binomial model** saw a reduction in execution time by approximately 36%, highlighting the impact of optimized tree traversal and usage of dynamic programing techniques, which has let to cut the number of expencive computations.
+- The **Black-Scholes model** achieved a execution time reduction of around 70%, benefiting from optimized mathematical computations, more efficient library calls and compiler changes.
+- The **Monte Carlo model** exhibited the most significant improvement with a reduction in execution time by over 78%, which can be attributed to optimized random number generation, parallelization of simulations, and variance reduction techniques.
+
+
 ## Project Structure
 
 - `Makefile`: Contains rules for compiling the project.
