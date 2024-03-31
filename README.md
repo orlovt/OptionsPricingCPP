@@ -44,8 +44,10 @@ Replace the parameters with your desired values to compute the price of an optio
   - `models/`: Pricing models implementations.
   - `util/`: Utility functions and helpers, such as mathematical functions.
 - `src/`: Source files mirroring the structure in `include/`.
-
+<details>
 ## Pricing Models
+<summary><strong>Pricing Models</strong> (click to expand)</summary>
+
 
 ### [Black-Scholes Model](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://en.wikipedia.org/wiki/Black%25E2%2580%2593Scholes_model&ved=2ahUKEwjQkuyalZ2FAxXltokEHTxTCxwQFnoECCkQAQ&usg=AOvVaw3Y3P-LHLGDz-OHGgwisPKx)
 
@@ -165,7 +167,8 @@ The expected payoff of the option is computed by averaging the payoffs of all si
 $$ \text{Option Price} = e^{-rT} \times \frac{1}{N} \sum_{i=1}^{N} \text{Payoff}_i $$
 
 where $` N `$ is the number of simulated paths.
-
+</details>
+  
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
